@@ -18,6 +18,49 @@
 
 ---
 
+## 🆕 最新收录
+
+<table>
+<tr>
+<td width="33%" valign="top">
+<a href="https://xian.app/products/47aa80e6-4927-4dd4-b332-5e459b1ccc48"><img src="https://pub-6030d398b27d47eba8aa3410cdcc9d05.r2.dev/c011ec70-0012-4000-8000-000000000012/47aa80e6-4927-4dd4-b332-5e459b1ccc48/1788245424067-0wsjwd.webp" width="100%" alt="Grok Bot 玩法全景手册"></a><br>
+<b><a href="https://xian.app/products/47aa80e6-4927-4dd4-b332-5e459b1ccc48">Grok Bot 玩法全景手册</a></b><br>
+<sub>Grok Bot 多智能体办公与自动化玩法手册</sub>
+</td>
+<td width="33%" valign="top">
+<a href="https://xian.app/products/d76bbb09-4dd5-4281-bddb-c13871ab5c48"><img src="https://pub-6030d398b27d47eba8aa3410cdcc9d05.r2.dev/c0ffee00-0008-4000-8000-000000000002/d76bbb09-4dd5-4281-bddb-c13871ab5c48/1786162637292-guxy1g.webp" width="100%" alt="乔木推荐"></a><br>
+<b><a href="https://xian.app/products/d76bbb09-4dd5-4281-bddb-c13871ab5c48">乔木推荐</a></b><br>
+<sub>精选 AI 工具导航，一页看清优势</sub>
+</td>
+<td width="33%" valign="top">
+<a href="https://xian.app/products/2bde4b36-fbdf-4420-9f73-09d46909c244"><img src="https://pub-6030d398b27d47eba8aa3410cdcc9d05.r2.dev/c0ffee00-0741-4000-8000-000000000001/2bde4b36-fbdf-4420-9f73-09d46909c244/1786161371584-qalmmg.webp" width="100%" alt="CodePilot"></a><br>
+<b><a href="https://xian.app/products/2bde4b36-fbdf-4420-9f73-09d46909c244">CodePilot</a></b><br>
+<sub>连接任意 AI 服务商的桌面端 Claude Code 工作空间</sub>
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+<a href="https://xian.app/products/a3aaf2b4-9686-49d5-945d-2c914b550f5a"><img src="https://pub-6030d398b27d47eba8aa3410cdcc9d05.r2.dev/f352ec2c-c0e7-4cca-9cb2-13fb2944cbab/a3aaf2b4-9686-49d5-945d-2c914b550f5a/1786239633053-d95xeg.webp" width="100%" alt="guizang-social-card-skill"></a><br>
+<b><a href="https://xian.app/products/a3aaf2b4-9686-49d5-945d-2c914b550f5a">guizang-social-card-skill</a></b><br>
+<sub>一句话生成有设计感的社交媒体卡片</sub>
+</td>
+<td width="33%" valign="top">
+<a href="https://xian.app/products/64a527d6-3942-48b3-8d3d-e6eec2976578"><img src="https://pub-6030d398b27d47eba8aa3410cdcc9d05.r2.dev/f352ec2c-c0e7-4cca-9cb2-13fb2944cbab/64a527d6-3942-48b3-8d3d-e6eec2976578/1786239730875-6ojxlw.webp" width="100%" alt="qiaomu-icon-generator"></a><br>
+<b><a href="https://xian.app/products/64a527d6-3942-48b3-8d3d-e6eec2976578">qiaomu-icon-generator</a></b><br>
+<sub>让 Codex 一句话生成 App 和网页图标</sub>
+</td>
+<td width="33%" valign="top">
+<a href="https://xian.app/products/a176cb59-8f85-43fb-8258-9b4c48a2dc13"><img src="https://pub-6030d398b27d47eba8aa3410cdcc9d05.r2.dev/f352ec2c-c0e7-4cca-9cb2-13fb2944cbab/a176cb59-8f85-43fb-8258-9b4c48a2dc13/1786239708290-kyy9da.webp" width="100%" alt="qiaomu-cut-skill"></a><br>
+<b><a href="https://xian.app/products/a176cb59-8f85-43fb-8258-9b4c48a2dc13">qiaomu-cut-skill</a></b><br>
+<sub>一句话让 AI 自动找素材并剪成视频</sub>
+</td>
+</tr>
+</table>
+
+> 想让你的产品出现在这里？**[提交你的产品 →](./SUBMIT.md)**
+
+---
+
 # 🌟 已收录产品
 
 当前已收录 **18 个产品**。下面按主要用途整理；有些产品本身会横跨多个方向。
