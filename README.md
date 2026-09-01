@@ -1,118 +1,76 @@
-# XIAN.APP Public Catalog
+# 仙点 · XIAN.APP
 
-仙点（[XIAN.APP](https://xian.app)）的公开产品目录与 GitHub 投稿入口。
+**发现 Vibe Coding 的灵感与作品。**  
+看看别人正在做什么，也把你刚做出来的产品放到这里。
 
-这里既提供 XIAN.APP 已收录产品的机器可读数据，也接受开发者和 AI Agent 通过 Pull Request 提交新产品。
+👉 **[访问 XIAN.APP](https://xian.app)**
 
-> **Website:** https://xian.app  
-> 本仓库不包含站点源码、后台数据、登录信息或用户隐私数据。
+## ✨ 提交你的产品
 
-## 两种数据
+欢迎独立开发者、Vibe Coder 和 AI Agent 投稿。
 
-| 路径 | 用途 |
-| --- | --- |
-| `apps/<slug>/app.json` | 一个产品一份投稿数据，适合人工或 Agent 提 PR |
-| `apps/<slug>/images/` | 投稿时附带的封面和截图 |
-| `data/apps.json` | XIAN.APP 已公开产品的机器可读聚合快照 |
-| `data/categories.json` | 当前公开分类字典 |
-| `schema/submission.schema.json` | GitHub 投稿格式 Schema |
-| `schema/catalog.schema.json` | 聚合目录 Schema |
-| `AGENTS.md` | 给 Codex、Claude Code、Cursor 等 Agent 的投稿协议 |
-| `SUBMIT.md` | 给人的投稿说明 |
+**自己提交：** 先看 [SUBMIT.md](./SUBMIT.md)，按说明准备产品资料并发起 Pull Request。  
+**让 Agent 提交：** 把下面这句话直接发给 Codex、Claude Code、Cursor 等 Agent：
 
-当前公开快照：**18 个产品**。
+> Read `AGENTS.md` and submit my product to XIAN.APP following the repository rules.
 
-## 提交你的产品
-
-新产品不要直接修改 `data/apps.json`。
-
-请新建：
-
-```text
-apps/my-product/
-├── app.json
-└── images/
-    ├── cover.webp
-    ├── 01.webp
-    └── 02.webp
-```
-
-然后发起 Pull Request：
-
-```text
-submit: My Product
-```
-
-完整规则见 [`SUBMIT.md`](./SUBMIT.md)。
-
-如果你正在使用 AI Agent，可以直接告诉它：
-
-> Read AGENTS.md and submit this product to XIAN.APP following the repository rules.
-
-## 图片策略
-
-**GitHub 投稿允许并推荐把图片一起提交。**
-
-这样每个 PR 本身就是一份完整、可追溯的产品资料，XIAN.APP 在导入时不需要依赖临时第三方图床。
-
-为了避免仓库长期被二进制资源撑大：
-
-- 优先 WebP；
-- 最多 1 张封面 + 4 张截图；
-- 单张建议小于 800 KB，最大 1.5 MB；
-- 产品被 XIAN.APP 导入后，生产环境图片可以复制到 Cloudflare R2/CDN；
-- GitHub 中的图片是投稿来源，不建议让网站长期直接使用 GitHub Raw 作为生产图床。
-
-对于已经由 XIAN.APP 收录并同步到 `data/apps.json` 的旧产品，图片 URL 仍可能直接指向现有 R2/CDN。
-
-## 推荐同步流程
-
-```text
-开发者 / Agent
-      ↓
-Pull Request
-      ↓
-人工审核并 Merge
-      ↓
-GitHub merge webhook / Action
-      ↓
-XIAN.APP Import API
-      ↓
-校验 app.json
-      ↓
-复制图片到 R2
-      ↓
-写入 Supabase
-      ↓
-刷新 data/apps.json
-```
-
-这样 **Merge 本身就可以代表“审核通过”**。站点只需要处理被合并到 `main` 的 `apps/**/app.json`，不用扫描所有 PR，也不用频繁全量同步。
-
-## 公开字段
-
-公开目录只保留产品展示所需信息，例如：
-
-- 产品名称、简介、描述；
-- 官网和开源地址；
-- 创作者公开名称；
-- 分类；
-- 封面和截图；
-- XIAN.APP 产品页；
-- 创建/更新时间。
-
-不会公开邮箱、登录信息、内部用户 ID、审核后台字段、API Key 或其他隐私数据。
-
-## 使用公开目录
-
-```js
-const catalog = await fetch(
-  "https://raw.githubusercontent.com/xtxo/xian.app/main/data/apps.json"
-).then((res) => res.json());
-
-console.log(catalog.count, catalog.apps);
-```
+提交后我们会进行审核，并把合适的产品同步到 **[XIAN.APP](https://xian.app)**，让更多人发现你的作品。
 
 ---
 
-**XIAN.APP · 仙点** — 发现 Vibe Coding 的灵感与作品。
+# 🌟 已收录产品
+
+当前已收录 **18 个产品**。下面按主要用途整理；有些产品本身会横跨多个方向。
+
+## 🤖 AI & Agent
+
+| 产品 | 一句话介绍 |
+| --- | --- |
+| [CodePilot](https://xian.app/products/2bde4b36-fbdf-4420-9f73-09d46909c244) | 连接任意 AI 服务商的桌面端 Claude Code 工作空间 |
+| [Gety](https://xian.app/products/66e56ce6-2959-4531-9d17-a9111db0dee2) | 让本地文件成为 AI Agent 随时可用的上下文 |
+| [OpenMontage](https://xian.app/products/1de0dbb8-9c67-476e-abb8-287a46fd170d) | 开源智能体视频制作系统，把 AI 编程助手变成视频工作室 |
+| [Infinite Canvas](https://xian.app/products/ec8a7d5a-0621-45c7-8aba-be82321092a0) | 面向 AI 创作的开源无限画布工作台 |
+| [Cowart](https://xian.app/products/54bd96d5-e500-46c6-a3dd-dcdba16fb39d) | 面向 Codex 的本地无限画布与 AI 图片创作插件 |
+
+## 🛠️ 开发工具
+
+| 产品 | 一句话介绍 |
+| --- | --- |
+| [Otty](https://xian.app/products/237e88ac-2787-4e36-a75b-369cf56dd17c) | Typora 团队打造的原生、美观、极速 AI 终端 |
+| [cc-haha](https://xian.app/products/daebbd0e-684d-4043-ba1e-f376f76fde1d) | Claude Code 本地运行与跨平台桌面端探索项目 |
+
+## 🧩 Agent Skills
+
+| 产品 | 一句话介绍 |
+| --- | --- |
+| [Grok Bot 玩法全景手册](https://xian.app/products/47aa80e6-4927-4dd4-b332-5e459b1ccc48) | Grok Bot 多智能体办公与自动化玩法手册 |
+| [guizang-social-card-skill](https://xian.app/products/a3aaf2b4-9686-49d5-945d-2c914b550f5a) | 一句话生成有设计感的社交媒体卡片 |
+| [qiaomu-icon-generator](https://xian.app/products/64a527d6-3942-48b3-8d3d-e6eec2976578) | 让 Codex 一句话生成 App 和网页图标 |
+| [qiaomu-cut-skill](https://xian.app/products/a176cb59-8f85-43fb-8258-9b4c48a2dc13) | 一句话让 AI 自动找素材并剪成视频 |
+| [Humanizer-zh](https://xian.app/products/183252bb-7df5-46db-a803-411b069d4b5a) | 去掉 AI 写作里最明显的套路感 |
+
+## ✨ 创意作品
+
+| 产品 | 一句话介绍 |
+| --- | --- |
+| [侨批生成器](https://xian.app/products/9bf717ae-e9eb-4efd-bd10-02047daf7764) | 把现代文字变成一封跨越时代的侨批家书 |
+| [Arnis](https://xian.app/products/d3234bd1-52b5-4608-90b0-7e113c23ec11) | 用真实世界地理数据生成高精度 Minecraft 地图 |
+
+## ⚡ 效率与生活
+
+| 产品 | 一句话介绍 |
+| --- | --- |
+| [乔木推荐](https://xian.app/products/d76bbb09-4dd5-4281-bddb-c13871ab5c48) | 精选 AI 工具导航，一页看清优势 |
+| [tickflow-stock-panel](https://xian.app/products/38572768-4d85-43e0-96a2-57b476e2a78f) | 自托管、零运维的 A 股智能量化工作台 |
+| [CyCity](https://xian.app/products/06a7ff4e-2907-43c1-887a-df5f70881af5) | 承诺核心功能永远免费的骑行 App |
+| [浮光](https://xian.app/products/b2e90105-1740-4e3b-9307-8bd327cc10f3) | 让常用的网站、应用和文件一触即达 |
+
+---
+
+## 🔮 关于仙点
+
+每一个产品背后，都是一段人与 AI 协作的创作旅程。
+
+来这里寻找下一个项目的火花，看看别人怎么用 Vibe Coding 把想法变成现实；如果你也做出了有意思的东西，**欢迎把它提交进来。**
+
+**[去 XIAN.APP 发现更多 →](https://xian.app)**
