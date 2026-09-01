@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/xtxo/xian.app/blob/main/schema/catalog.schema.json",
+  "title": "XIAN.APP Public Catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "generated_at", "source", "count", "apps"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "source": { "type": "string", "format": "uri" },
+    "count": { "type": "integer", "minimum": 0 },
+    "apps": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/app" }
+    }
+  },
+  "$defs": {
+    "category": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "slug"],
+      "properties": {
+        "name": { "type": "string" },
+        "slug": { "type": "string" }
+      }
+    },
+    "creator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "avatar_url"],
+      "properties": {
+        "name": { "type": ["string", "null"] },
+        "avatar_url": { "type": ["string", "null"], "format": "uri" }
+      }
+    },
+    "app": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "tagline",
+        "description",
+        "website_url",
+        "open_source_url",
+        "xian_url",
+        "creator",
+        "categories",
+        "cover_image",
+        "screenshots",
+        "created_at",
+        "updated_at"
+      ],
+      "properties": {
+        "id": { "type": "string", "format": "uuid" },
+        "name": { "type": "string", "minLength": 1 },
+        "tagline": { "type": ["string", "null"] },
+        "description": { "type": ["string", "null"] },
+        "website_url": { "type": "string", "format": "uri" },
+        "open_source_url": { "type": ["string", "null"], "format": "uri" },
+        "xian_url": { "type": "string", "format": "uri" },
+        "creator": { "$ref": "#/$defs/creator" },
+        "categories": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/category" }
+        },
+        "cover_image": { "type": ["string", "null"], "format": "uri" },
+        "screenshots": {
+          "type": "array",
+          "items": { "type": "string", "format": "uri" }
+        },
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}
