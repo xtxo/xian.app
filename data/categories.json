@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-01T07:11:42Z",
+  "source": "https://xian.app",
+  "categories": [
+    { "name": "AI工具", "slug": "ai-tools", "icon": "🤖", "sort_order": 1 },
+    { "name": "开发工具", "slug": "dev-tools", "icon": "🛠", "sort_order": 2 },
+    { "name": "设计", "slug": "design", "icon": "🎨", "sort_order": 3 },
+    { "name": "效率工具", "slug": "productivity", "icon": "⚡", "sort_order": 4 },
+    { "name": "游戏", "slug": "games", "icon": "🎮", "sort_order": 5 },
+    { "name": "教育", "slug": "education", "icon": "📚", "sort_order": 6 },
+    { "name": "创意", "slug": "creative", "icon": "✨", "sort_order": 7 },
+    { "name": "开发辅助", "slug": "skill", "icon": null, "sort_order": 8 },
+    { "name": "优秀SKILL", "slug": "excellent-skill", "icon": null, "sort_order": 9 },
+    { "name": "其他", "slug": "other", "icon": "📦", "sort_order": 99 }
+  ]
+}
